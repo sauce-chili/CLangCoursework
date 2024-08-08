@@ -1,0 +1,1 @@
+All variables are good because they are loop variables.

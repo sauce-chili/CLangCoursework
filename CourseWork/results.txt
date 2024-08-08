@@ -1,0 +1,141 @@
+Protocol: 
+ 
+All variables are good because they are loop variables. 
+Input data: 
+ 
+13
+int main()
+{
+	for(int i = 0; i < 5; i++)
+	{
+		do
+		{
+			1E5 + 0x4245;
+		}
+		while(1)
+	}
+
+	return 0;
+} 
+Expected result:
+all is correct 
+Result:
+all is correct
+ 
+------------------------- 
+The third parameter of the for loop is a bad variable. 
+Input data: 
+ 
+10
+int main()
+{
+		for(int i = 0; i < 10;)
+		{
+				//int a = i + 1;
+		}
+		f(i);
+		//int b = 0;
+		return 0;
+} 
+Expected result:
+2, i
+6, i 
+Result:
+2, i
+6, i
+ 
+------------------------- 
+Multiple bad variables inside nested loops 
+Input data: 
+ 
+20
+int main()
+{
+	int a,b;
+	for(int a = 0; a < 10; a++)
+	{
+		do
+		{ // some commnet
+			if(1)
+			{
+				b++;
+			}
+		}
+		while(a < 5)
+		while(b > 0)
+		// int b = 0
+		{
+			{a + a};
+		}
+	}
+} 
+Expected result:
+2, b
+9, b
+13, b 
+Result:
+2, b
+9, b
+13, b
+ 
+------------------------- 
+Wrong number of lines. 
+Input data: 
+ 
+21
+int main()
+{
+	int a,b;
+	for(int a = 0; a < 10; a++)
+	{
+		do
+		{ // some commnet
+			if(1)
+			{
+				b++;
+			}
+		}
+		while(a < 5)
+		while(b > 0)
+		// int b = 0
+		{
+			{a + a};
+		}
+	}
+} 
+Expected result:
+Wrong count of strings! 
+Result:
+Wrong count of strings!
+ 
+------------------------- 
+Wrong number of lines. 
+Input data: 
+ 
+0
+int main()
+{
+	int a,b;
+	for(int a = 0; a < 10; a++)
+	{
+		do
+		{ // some commnet
+			if(1)
+			{
+				b++;
+			}
+		}
+		while(a < 5)
+		while(b > 0)
+		// int b = 0
+		{
+			{a + a};
+		}
+	}
+} 
+Expected result:
+Wrong count of strings! 
+Result:
+Wrong count of strings!
+ 
+------------------------- 

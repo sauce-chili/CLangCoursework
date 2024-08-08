@@ -1,0 +1,1 @@
+Multiple bad variables inside nested loops
